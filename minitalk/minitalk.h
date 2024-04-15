@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minitalk_helpers.c                                 :+:      :+:    :+:   */
+/*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aait-bou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/07 21:32:08 by aait-bou          #+#    #+#             */
-/*   Updated: 2024/04/07 21:32:11 by aait-bou         ###   ########.fr       */
+/*   Created: 2024/04/07 21:31:37 by aait-bou          #+#    #+#             */
+/*   Updated: 2024/04/07 21:31:40 by aait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk_bonus.h"
+#ifndef MINITALK_H
+# define MINITALK_H
 
-int	ft_atoi(char *arg)
-{
-	int	result;
+# include "./ft_printf/ft_printf.h"
+# include <signal.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
 
-	result = 0;
-	while (*arg >= '0' && *arg <= '9')
-	{
-		result = (result * 10) + (*arg - '0');
-		arg++;
-	}
-	return (result);
-}
+int	ft_atoi(char *arg);
+int	ft_strlen(const char *s);
 
-int	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
+#endif

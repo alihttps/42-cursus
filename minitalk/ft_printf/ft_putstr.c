@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minitalk_helpers.c                                 :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aait-bou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/07 21:32:08 by aait-bou          #+#    #+#             */
-/*   Updated: 2024/04/07 21:32:11 by aait-bou         ###   ########.fr       */
+/*   Created: 2023/11/29 23:09:42 by aait-bou          #+#    #+#             */
+/*   Updated: 2023/11/29 23:09:46 by aait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk_bonus.h"
+#include "ft_printf.h"
 
-int	ft_atoi(char *arg)
+int	ft_putstr(char *str)
 {
-	int	result;
+	int	countchr;
 
-	result = 0;
-	while (*arg >= '0' && *arg <= '9')
+	countchr = 0;
+	while (*str)
 	{
-		result = (result * 10) + (*arg - '0');
-		arg++;
+		ft_putchar((int)*str);
+		countchr++;
+		str++;
 	}
-	return (result);
-}
-
-int	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	return (countchr);
 }
