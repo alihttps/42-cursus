@@ -52,14 +52,15 @@ t_stack *find_max_value (t_stack *stack)
     return max_node;
 }
 
-void sort_three (t_stack **a)
+void	sort_three(t_stack **a)
 {
-    t_stack *max_node = find_max_value(*a);
+	t_stack	*biggest_node;
 
-    if (max_node == *a)
-        ra(a);
-    else if (max_node == (*a)->next)
-        rra(a);
-    if ((*a)->data > (*a)->next->data)
-        sa(a);
+	biggest_node = find_max_value(*a);
+	if (biggest_node == *a) 
+		ra(a);
+	else if ((*a)->next == biggest_node)
+		rra(a); 
+	if ((*a)->data > (*a)->next->data)
+		sa(a);
 }

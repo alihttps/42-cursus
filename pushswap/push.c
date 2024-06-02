@@ -22,3 +22,15 @@ void push (t_stack **source, t_stack **dest)
     *dest = *source;
     *source = tmp;
 }
+
+void pa(t_stack **b, t_stack **a)
+{
+    push (b, a);
+    ft_putstr ("pa\n");
+}
+
+void pb(t_stack **a, t_stack **b)
+{
+    push (a, b);
+    ft_putstr ("pb\n");
+}
